@@ -1,0 +1,1 @@
+print("Cursul 1 :)")
