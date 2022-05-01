@@ -1,5 +1,6 @@
 import datetime
 
+
 def compute_c(cnp):
     number = "279146358279"
     product_list = [int(x) * int(y) for x, y in zip(number, cnp)]
@@ -32,8 +33,8 @@ def is_cnp_valid(cnp):
     return True
 
 
-cnp = input("Enter a CNP: ")
-if is_cnp_valid(cnp):
+cnp_input = input("Enter a CNP: ")
+if is_cnp_valid(cnp_input):
     print("The CNP is valid")
 else:
     print("The CNP is NOT valid")

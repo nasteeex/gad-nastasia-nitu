@@ -1,1 +1,1 @@
-print("Cursul 1 :)")
+print("Cursul 1 :")

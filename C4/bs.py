@@ -18,7 +18,7 @@ for i in title:
         for td_index in tr_index.find_all("tr"):
             td_list = []
             if td_index.find_all("th"):
-                # print(td_index.find_all("th"))
+                print(td_index.find_all("th"))
                 # for th_index in td_index.find_all("th"):
                     # print(th_index.get_text())
                     # header.append(th_index.get_text())
@@ -32,8 +32,8 @@ for i in title:
             dataset.append(td_list)
 
 print(header)
-print(dataset)
+#print(dataset)
 
 df = pd.DataFrame(dataset, columns=header)
-print(df)
+#print(df)
 df.to_csv("CursBnr.csv", header=header)
