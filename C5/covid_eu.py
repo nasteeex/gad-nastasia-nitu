@@ -32,4 +32,5 @@ dataset = dataset[1:]
 
 df = pd.DataFrame(dataset, columns=header)
 df.set_index(header[0], inplace=True)
-df.to_csv("situatie.csv", header=header[1:5])
+df.to_csv("covid_eu.csv", header=header[1:5])
+df.to_csv("covid_eu.xls", header=header[1:5])
