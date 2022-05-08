@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 tipuri_companie = (("SRL", "S.R.L"), ("SA", "S.A"))
 
 

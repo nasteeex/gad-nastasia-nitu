@@ -4,8 +4,6 @@ from django.http import HttpResponseRedirect
 from user_profile.models import Pontaj
 import datetime
 
-# Create your views here.
-
 
 @login_required
 def new_timesheet(request):
