@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-    <a href="{% url 'companies:adauga' %}" class="btn btn-success">Adauga companie</a>
+    <a href="{% url 'jobs:adauga' %}" class="btn btn-success">Adauga job</a>
     <br>
     <table class="table">
         <thead>
         <tr>
             <th>Index</th>
-            <th>Nume</th>
+            <th>Titlu</th>
+            <th>Descriere</th>
             <th>Website</th>
-            <th>Tip Companie</th>
+            <th>Modalitate Aplicare</th>
             <th>Stare</th>
             <th>Actiuni</th>
         </tr>
         </thead>
         <tbody>
-        {% for item in companies_list %}
+        {% for item in jobs_list %}
             <tr>
-                <td>{{ forloop.counter }}</td>
-                <td>{{ item.nume }}</td>
-                <td>{{ item.website }}</td>
-                <td>{{ item.tip_companie }}</td>
+                <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.url }}</td>
+                <td>{{ item.how_to_apply }}</td>
                 <td>{% if item.active == 1 %}
                     <span>Activ</span>
                 {% else %}
@@ -27,11 +29,11 @@
                 {% endif %}
                 </td>
                 <td>
-                    <a href="{% url 'companies:modifica' item.id %}" class="btn btn-success">Modifica</a>
+                    <a href="{% url 'jobs:modifica' item.id %}" class="btn btn-success">Modifica</a>
                     {% if item.active == 1 %}
-                        <a href="{% url 'companies:sterge' item.id %}" class="btn btn-danger">Sterge</a>
+                        <a href="{% url 'jobs:sterge' item.id %}" class="btn btn-danger">Sterge</a>
                     {% else %}
-                        <a href="{% url 'companies:activeaza' item.id %}" class="btn btn-info">Activeaza</a>
+                        <a href="{% url 'jobs:activeaza' item.id %}" class="btn btn-info">Activeaza</a>
                     {% endif %}
                 </td>
             </tr>
