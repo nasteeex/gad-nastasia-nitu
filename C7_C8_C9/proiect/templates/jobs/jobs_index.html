@@ -8,6 +8,7 @@
             <th>Index</th>
             <th>Titlu</th>
             <th>Descriere</th>
+            <th>Tip</th>
             <th>Website</th>
             <th>Modalitate Aplicare</th>
             <th>Stare</th>
@@ -20,6 +21,7 @@
                 <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
                 <td>{{ item.title }}</td>
                 <td>{{ item.description }}</td>
+                <td>{{ item.type }}</td>
                 <td>{{ item.url }}</td>
                 <td>{{ item.how_to_apply }}</td>
                 <td>{% if item.active == 1 %}
